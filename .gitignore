@@ -1,0 +1,8 @@
+*.gem
+/coverage
+/dev
+/Gemfile.lock
+/gems
+/spec/tmp
+/tmp
+debug.rb

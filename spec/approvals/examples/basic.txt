@@ -1,0 +1,12 @@
+first line
+second line
+
+  this is loopy 0
+    this is loopy 1
+      this is loopy 2
+
+Welcome admin
+WARNING: YOU HAVE ADMIN RIGHTS
+{{ not ruby code }}
+
+hello hello hello 
