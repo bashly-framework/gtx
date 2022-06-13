@@ -4,8 +4,6 @@ SimpleCov.start
 require 'bundler'
 Bundler.require :default, :development
 
-require 'gtx'
-
 # Consistent output (for rspec_approvals)
 ENV['TTY'] = 'off'
 ENV['COLUMNS'] = '80'
