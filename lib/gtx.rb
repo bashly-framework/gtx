@@ -1,13 +1,6 @@
-if ENV['BYEBUG']
-  require 'byebug'
-  require 'lp'
-end
-
 require 'erb'
 
 class GTX
-  VERSION = "0.1.0"
-
   class << self
     def render(template, context: nil, filename: nil)
       new(template, filename: filename).parse context
