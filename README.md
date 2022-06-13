@@ -30,8 +30,8 @@ GTX converts your template code to ERB before rendering its output.
 
 ```ruby
 > any text
-> ruby code: {{ "hello " * 3 }}
-> also ruby: <%= "world " * 3 %>
+> inline code: {{ "hello " * 3 }}
+>          or: <%= "world " * 3 %>
 
 3.times do |i|
   > loopy text {{ i + 1 }}
@@ -44,8 +44,8 @@ end
 
 ```ruby
 any text
-ruby code: <%= "hello " * 3 %>
-also ruby: <%= "world " * 3 %>
+inline code: <%= "hello " * 3 %>
+         or: <%= "world " * 3 %>
 
 <%- 3.times do |i| -%>
 loopy text <%= i + 1 %>
