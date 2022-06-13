@@ -2,6 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/gtx.svg)](https://badge.fury.io/rb/gtx)
 [![Build Status](https://github.com/DannyBen/gtx/workflows/Test/badge.svg)](https://github.com/DannyBen/gtx/actions?query=workflow%3ATest)
+[![Maintainability](https://api.codeclimate.com/v1/badges/8c7e16a17866cc0e6a17/maintainability)](https://codeclimate.com/github/DannyBen/gtx/maintainability)
 
 ---
 
