@@ -28,3 +28,12 @@ end
 # Start a line with = to call rnby ruby code that returns a string. The string
 # will be appended to the output using ERB's <%= tag
 = "hello " * 3
+
+# ... which is a shortcut to
+> {{ "..." }}
+
+# Triple braces will be handled properly (will output "{output}")
+> {{{ "output" }}}
+
+# Standard ERB output tags can also be used
+> <%= "erb" %> together with {{ "gtx tags" }}

@@ -10,3 +10,6 @@ WARNING: YOU HAVE ADMIN RIGHTS
 {{ not ruby code }}
 
 hello hello hello 
+...
+{output}
+erb together with gtx tags

@@ -6,12 +6,12 @@ class GTX
       new(template, filename: filename).parse context
     end
 
-    def load_file(path)
-      new(File.read(path), filename: path)
+    def load_file(path, filename: nil)
+      new File.read(path), filename: (filename || path)
     end
 
-    def render_file(path, context: nil)
-      load_file(path).parse context
+    def render_file(path, context: nil, filename: nil)
+      load_file(path, filename: filename).parse context
     end
   end
 
@@ -37,13 +37,14 @@ class GTX
   
   def parse(context = nil)
     context ||= self
-    erb.result context.instance_eval { binding }
+    context = context.instance_eval { binding } unless context.is_a? Binding
+    erb.result context
   end
 
 protected
 
   def eval_vars(string)
-    string.gsub(/{{(.*?)}}/, '<%= \1 %>')
+    string.gsub(/{{([^{].*?)}}/, '<%=\1%>')
       .gsub(/\\\}\\\}/, '}}')
       .gsub(/\\\{\\\{/, '{{')
   end

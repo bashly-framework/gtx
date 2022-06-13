@@ -9,7 +9,7 @@ second line
 <%- # Other lines are just ruby code which will be converted to ERB's <%- tag -%>
 <%- # Anything formatted as {{ ... }} is converted to ERB's <%= tag -%>
 <%- 3.times do |i| -%>
-<%=  " " * i * 2  %>  this is loopy <%=  i  %>
+<%= " " * i * 2 %>  this is loopy <%= i %>
 <%- end -%>
 
 <%-  -%>
@@ -18,7 +18,7 @@ second line
 Welcome admin
 WARNING: YOU HAVE ADMIN RIGHTS
 <%- else -%>
-Welcome <%=  user  %>
+Welcome <%= user %>
 <%- end -%>
 <%-  -%>
 <%- # In order to use literal {{ or }}, escape them -%>
@@ -28,3 +28,12 @@ Welcome <%=  user  %>
 <%- # Start a line with = to call rnby ruby code that returns a string. The string -%>
 <%- # will be appended to the output using ERB's <%= tag -%>
 <%= "hello " * 3 %>
+<%-  -%>
+<%- # ... which is a shortcut to -%>
+<%= "..." %>
+<%-  -%>
+<%- # Triple braces will be handled properly (will output "{output}") -%>
+{<%= "output" %>}
+<%-  -%>
+<%- # Standard ERB output tags can also be used -%>
+<%= "erb" %> together with <%= "gtx tags" %>

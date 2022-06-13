@@ -33,6 +33,28 @@ describe GTX do
     it "returns the parsed ERB output" do
       expect(subject.parse context).to match_approval('gtx/parse')
     end
+
+    context "when a Binding object is passed instead of a regular object" do
+      let(:context) do 
+        module Context
+          class One
+            def get_binding; binding; end
+          end
+
+          class Two
+            def report; "success"; end
+          end
+        end
+
+        Context::One.new.get_binding
+      end
+
+      let(:template) { "= Two.new.report" }
+
+      it "uses the Binding object as is instead of re-binding it" do        
+        expect(subject.parse context).to match_approval('gtx/parse-binding')
+      end
+    end
   end
 
   context "class methods" do
@@ -64,7 +86,7 @@ describe GTX do
       let(:gtx_double) { double :parse }
 
       it "is a shortcut to ::load_file(path).parse context" do
-        expect(subject).to receive(:load_file).with(example_path).and_return(gtx_double)
+        expect(subject).to receive(:load_file).with(example_path, filename: nil).and_return(gtx_double)
         expect(gtx_double).to receive(:parse).with(context)
         subject.render_file example_path, context: context
       end
