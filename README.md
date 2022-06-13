@@ -57,8 +57,8 @@ loopy text <%= i + 1 %>
 
 </td></tr></table>
 
-The conversion is specifically kept at 1:1 ratio, so that the correct line number
-can be referenced in case of an error.
+The conversion is specifically kept at 1:1 line ratio, so that the correct line
+number can be referenced in case of an error.
 
 ### Explanation
 
