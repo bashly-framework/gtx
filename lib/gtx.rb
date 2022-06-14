@@ -22,7 +22,7 @@ class GTX
   end
 
   def erb_source
-    template.each_line.map do |line|
+    template.strip.lines.map do |line|
       case line
       when /^\s*> ?(.*)/ then eval_vars $1
       when /^\s*= ?(.*)/ then "<%= #{eval_vars $1.strip} %>"
