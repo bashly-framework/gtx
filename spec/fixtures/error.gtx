@@ -1,0 +1,19 @@
+> first line
+> second line
+>
+
+3.times do |i|
+  > {{ " " * i * 2 }}  this is loopy {{ i }}
+end
+>
+
+if true
+  > Welcome admin
+  > WARNING: YOU HAVE ADMIN RIGHTS
+end
+
+= "hello " * 3
+
+# Fail here
+= 100 / 0
+= "hello " * 3

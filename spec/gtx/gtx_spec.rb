@@ -4,7 +4,7 @@ describe GTX do
   subject { described_class.new template }
   let(:context) { double user: 'admin' }
   let(:template) { "> some output\nruby_code = 'yes'\n= ruby_code" }
-  let(:example_path) { "examples/full.rb" }
+  let(:example_path) { "examples/full.gtx" }
 
   describe 'full example' do
     subject { described_class.load_file example_path }
@@ -32,6 +32,16 @@ describe GTX do
   describe '#parse' do
     it "returns the parsed ERB output" do
       expect(subject.parse context).to match_approval('gtx/parse')
+    end
+
+    context "on error" do
+      subject { described_class.load_file "spec/fixtures/error.gtx" }
+
+      it "registers the correct file and line number in the backtrace" do
+        expect { subject.parse }.to raise_error(ZeroDivisionError) do |e|
+          expect(e.backtrace.first).to include "spec/fixtures/error.gtx:18"
+        end
+      end
     end
 
     context "when a Binding object is passed instead of a regular object" do

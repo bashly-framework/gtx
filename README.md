@@ -88,7 +88,7 @@ that is expected to be a part of the output.
 Any other line, will be treated as Ruby code and will be enclosed using ERB's 
 `<%- ... -%>` syntax.
 
-See the [example template](examples/full.rb) for additional nuances.
+See the [example template](examples/full.gtx) for additional nuances.
 
 ## Usage
 
