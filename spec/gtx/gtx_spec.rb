@@ -26,6 +26,7 @@ describe GTX do
 
   describe '#erb' do
     it "returns ERB object" do
+      expect(subject.erb).to be_an ERB
     end
   end
 
