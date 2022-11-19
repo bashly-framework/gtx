@@ -18,7 +18,8 @@ class GTX
   attr_reader :template, :filename
 
   def initialize(template, filename: nil)
-    @template, @filename = template, filename
+    @template = template
+    @filename = filename
   end
 
   def erb_source
@@ -34,7 +35,7 @@ class GTX
   def erb
     ERB.new(erb_source, trim_mode: '-').tap { |a| a.filename = filename }
   end
-  
+
   def parse(context = nil)
     context ||= self
     context = context.instance_eval { binding } unless context.is_a? Binding
@@ -48,5 +49,4 @@ protected
       .gsub(/\\\}\\\}/, '}}')
       .gsub(/\\\{\\\{/, '{{')
   end
-
 end
