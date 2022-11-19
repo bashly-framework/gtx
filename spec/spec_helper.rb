@@ -13,6 +13,8 @@ ENV['TTY'] = 'off'
 ENV['COLUMNS'] = '80'
 ENV['LINES'] = '30'
 
+require_relative 'fixtures/mock_context'
+
 RSpec.configure do |c|
   c.strip_ansi_escape = true
 end
