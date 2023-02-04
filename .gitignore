@@ -5,4 +5,4 @@
 /gems
 /spec/tmp
 /tmp
-debug.rb
+debug.runfile

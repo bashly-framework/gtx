@@ -1,12 +1,9 @@
-require "runfile-tasks"
 require "byebug"
-require_relative 'lib/gtx'
+require 'gtx/version'
 
 title   "GTX Developer Toolbelt"
 summary "Runfile tasks for building the GTX gem"
 version GTX::VERSION
 
-RunfileTasks::RubyGems.all 'gtx'
-RunfileTasks::Testing.rspec
-
-require './debug.rb' if File.exist? 'debug.rb'
+import_gem 'runfile-tasks/gem'
+import 'debug'
