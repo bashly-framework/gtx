@@ -46,7 +46,7 @@ protected
 
   def eval_vars(string)
     string.gsub(/{{([^{].*?)}}/, '<%=\1%>')
-      .gsub(/\\\}\\\}/, '}}')
-      .gsub(/\\\{\\\{/, '{{')
+      .gsub('\\}\\}', '}}')
+      .gsub('\\{\\{', '{{')
   end
 end

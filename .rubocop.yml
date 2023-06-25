@@ -8,9 +8,8 @@ inherit_gem:
     - rspec.yml
 
 AllCops:
-  TargetRubyVersion: 2.7.0
+  TargetRubyVersion: 3.0
   Exclude:
-    - 'debug.rb'
     - 'dev/**/*'
 
 # Allow methods that start with `get_` in some cases

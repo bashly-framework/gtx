@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.files       = Dir['README.md', 'lib/**/*.*']
   s.homepage    = 'https://github.com/dannyben/gtx'
   s.license     = 'MIT'
-  s.required_ruby_version = '>= 2.7.0'
+  s.required_ruby_version = '>= 3.0'
 
   s.metadata = {
     'bug_tracker_uri'       => 'https://github.com/DannyBen/gtx/issues',
