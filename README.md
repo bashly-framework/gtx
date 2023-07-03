@@ -139,9 +139,9 @@ GTX.render string, context: optional_object, filename: optional_filename
 ## But... why?
 
 GTX was created to provide a code-first alternative to ERB, specifically for 
-the code generation templates used by [Bashly][bashly]. Enclosing Ruby code
-inside ERB tags, and ensuring there are no excess empty lines in the ERB
-template yielded some hard-to-maintain templates.
+the [code generation templates][bashly-views] used by [Bashly][bashly].
+Enclosing Ruby code inside ERB tags, and ensuring there are no excess empty
+lines in the ERB template yielded some hard-to-maintain templates.
 
 
 ## Contributing / Support
@@ -153,4 +153,5 @@ to contribute, feel free to [open an issue][issues].
 
 [issues]: https://github.com/DannyBen/gtx/issues
 [bashly]: https://bashly.dannyb.co/
+[bashly-views]: https://github.com/DannyBen/bashly/tree/master/lib/bashly/views
 
