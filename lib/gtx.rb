@@ -7,7 +7,7 @@ class GTX
     end
 
     def load_file(path, filename: nil)
-      new File.read(path), filename: (filename || path)
+      new File.read(path), filename: filename || path
     end
 
     def render_file(path, context: nil, filename: nil)

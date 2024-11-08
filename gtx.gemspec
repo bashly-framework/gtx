@@ -14,10 +14,11 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
   s.required_ruby_version = '>= 3.0'
 
+  s.add_dependency 'erb', '~> 4.0'
+
   s.metadata = {
     'bug_tracker_uri'       => 'https://github.com/DannyBen/gtx/issues',
     'changelog_uri'         => 'https://github.com/DannyBen/gtx/blob/master/CHANGELOG.md',
-    'homepage_uri'          => 'https://github.com/dannyben/gtx',
     'source_code_uri'       => 'https://github.com/dannyben/gtx',
     'rubygems_mfa_required' => 'true',
   }
