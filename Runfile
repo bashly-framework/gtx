@@ -1,4 +1,4 @@
-require "byebug"
+require 'debug'
 require 'gtx/version'
 
 title   "GTX Developer Toolbelt"
