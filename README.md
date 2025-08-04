@@ -145,7 +145,7 @@ to contribute, feel free to [open an issue][issues].
 
 ---
 
-[issues]: https://github.com/DannyBen/gtx/issues
+[issues]: https://github.com/bashly-framework/gtx/issues
 [bashly]: https://bashly.dannyb.co/
 [bashly-views]: https://github.com/DannyBen/bashly/tree/master/lib/bashly/views
 

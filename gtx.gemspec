@@ -10,16 +10,16 @@ Gem::Specification.new do |s|
   s.authors     = ['Danny Ben Shitrit']
   s.email       = 'db@dannyben.com'
   s.files       = Dir['README.md', 'lib/**/*.*']
-  s.homepage    = 'https://github.com/dannyben/gtx'
+  s.homepage    = 'https://github.com/bashly-framework/gtx'
   s.license     = 'MIT'
   s.required_ruby_version = '>= 3.1'
 
   s.add_dependency 'erb', '~> 4.0'
 
   s.metadata = {
-    'bug_tracker_uri'       => 'https://github.com/DannyBen/gtx/issues',
-    'changelog_uri'         => 'https://github.com/DannyBen/gtx/blob/master/CHANGELOG.md',
-    'source_code_uri'       => 'https://github.com/dannyben/gtx',
+    'bug_tracker_uri'       => 'https://github.com/bashly-framework/gtx/issues',
+    'changelog_uri'         => 'https://github.com/bashly-framework/gtx/blob/master/CHANGELOG.md',
+    'source_code_uri'       => 'https://github.com/bashly-framework/gtx',
     'rubygems_mfa_required' => 'true',
   }
 end
