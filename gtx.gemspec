@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
   s.required_ruby_version = '>= 3.1'
 
-  s.add_dependency 'erb', '~> 4.0'
+  s.add_dependency 'erb', '~> 5.0'
 
   s.metadata = {
     'bug_tracker_uri'       => 'https://github.com/bashly-framework/gtx/issues',
