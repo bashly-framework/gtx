@@ -12,9 +12,9 @@ Gem::Specification.new do |s|
   s.files       = Dir['README.md', 'lib/**/*.*']
   s.homepage    = 'https://github.com/bashly-framework/gtx'
   s.license     = 'MIT'
-  s.required_ruby_version = '>= 3.1'
+  s.required_ruby_version = '>= 3.2'
 
-  s.add_dependency 'erb', '~> 5.0'
+  s.add_dependency 'erb', '>= 4.0', '< 7'
 
   s.metadata = {
     'bug_tracker_uri'       => 'https://github.com/bashly-framework/gtx/issues',
