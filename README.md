@@ -1,6 +1,6 @@
 # GTX - Minimal Template Engine
 
-![repocard](repocard.svg)
+![repocard](https://repocard.dannyben.com/svg/gtx.svg)
 
 GTX is a minimal template engine that transpiles to ERB before using it to 
 generate the output.
